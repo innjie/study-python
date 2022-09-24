@@ -31,6 +31,7 @@ while index >= 1:
     if index == 0:
         print('end')
 
+
 absent = [2, 5]
 no_book = [7]
 for student in range(1, 11):
@@ -42,3 +43,31 @@ for student in range(1, 11):
 
 # -----------------------------
 # IO
+print('python', 'java', sep = ',')
+
+# python, java?
+print('python', 'java', sep = ',', end = '?')
+
+print("Python", "Java", file=sys.stdout)
+print("Python", "Java", file=sys.stderr)
+
+scores = {"수학" : 0, "영어" : 50, "코딩" : 100}
+for subject, score in scores.items():
+    # subject와 score가 key-value로 나눠서 나온다.
+    print(subject, score)
+
+scores = {"수학" : 0, "영어" : 50, "코딩" : 100}
+for subject, score in scores.items():
+    # subject와 score가 key-value로 나눠서 나온다.
+    print(subject.ljust(8), str(score).rjsut(4), sep = ":")
+
+# 10자리 확보하고 500 출력, 오른쪽 정렬
+print("{0: >10}".format(500))
+# 부호 출력
+print("{0: >+10}".format(500))
+# 왼쪽 정령, 빈칸 _로 바꾸기
+print("{0:_<+10}".format(500))
+# 3자리마다 , 출력
+print("{0:,}".format(100000000))
+# 소수점 특정 자리수까지만 표시
+print("{0:.2f}".format(5/3))
